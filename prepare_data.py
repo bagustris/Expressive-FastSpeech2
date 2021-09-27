@@ -46,12 +46,12 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         '--extract_nonkr',
-        help='extract non korean charactor',
+        help='extract non korean character',
         action='store_true',
     )
     parser.add_argument(
         '--extract_nonen',
-        help='extract non english charactor',
+        help='extract non english character',
         action='store_true',
     )
     parser.add_argument(

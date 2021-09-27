@@ -1,4 +1,4 @@
-python==3.6.3
+#python==3.6.3
 g2pk==0.9.4
 torch==1.7.0
 numpy==1.19.5
@@ -6,7 +6,7 @@ tgt==1.4.3
 scipy==1.5.0
 pyworld==0.2.10
 librosa==0.7.2
-numba==0.53.1
+numba==0.48
 matplotlib==3.2.2
 unidecode==1.1.1
 inflect==4.1.0
@@ -20,3 +20,4 @@ PyYAML==5.4.1
 tqdm==4.46.1
 moviepy==1.0.3
 quickspacer==1.0.4
+montreal-forced-aligner==2.0.0a13
