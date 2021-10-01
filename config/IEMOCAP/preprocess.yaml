@@ -1,11 +1,11 @@
 dataset: "IEMOCAP"
 
 path:
-  corpus_path: "/groups/gac50538/IEMOCAP"
+  corpus_path: "/groups/gac50538/IEMOCAP/"
   sub_dir_name: "sessions"
   lexicon_path: "lexicon/iemocap-lexicon.txt"
   fixed_text_path: "./preparation/iemocap_fixed.txt"
-  raw_path: "./raw_data/IEMOCAP"
+  raw_path: "./raw_data/IEMOCAP/"
   preprocessed_path: "./preprocessed_data/IEMOCAP"
 
 preprocessing:

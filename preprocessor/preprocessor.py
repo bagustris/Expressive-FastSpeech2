@@ -66,7 +66,7 @@ class Preprocessor:
                 spk_id = line.split("|")[0]
                 spk_dict[spk_id] = i
         return spk_dict
-    
+
     def load_filelist_dict(self):
         filelist_dir = os.path.join(self.config["path"]["raw_path"], 'filelist.txt')
         filelist_dict, emotion_dict, arousal_dict, valence_dict = dict(), dict(), dict(), dict()
@@ -81,9 +81,9 @@ class Preprocessor:
         for i, emotion in enumerate(list(emotions)):
             emotion_dict[emotion] = i
         for i, arousal in enumerate(list(arousals)):
-            arousal_dict[arousal] = i 
+            arousal_dict[arousal] = i
         for i, valence in enumerate(list(valences)):
-            valence_dict[valence] = i 
+            valence_dict[valence] = i
         emotion_dict = {
             "emotion_dict": emotion_dict,
             "arousal_dict": arousal_dict,
@@ -135,6 +135,7 @@ class Preprocessor:
         # Perform normalization if necessary
         if self.pitch_normalization:
             pitch_mean = pitch_scaler.mean_[0]
+            # pitch_mean = np.mean(pitch_scaler[0])
             pitch_std = pitch_scaler.scale_[0]
         else:
             # A numerical trick to avoid normalization...
