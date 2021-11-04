@@ -14,7 +14,7 @@ from utils.model import get_model, get_vocoder
 from utils.tools import to_device, synth_samples
 from dataset import TextDataset
 from text import text_to_sequence
-from text.korean import tokenize, normalize_nonchar
+#from text.korean import tokenize, normalize_nonchar
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -111,7 +111,11 @@ def synthesize(model, step, configs, vocoder, batchs, control_values, tag):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--restore_step", type=int, required=True)
+    parser.add_argument(
+        "--restore_step", 
+        type=int, 
+        default=900000,
+        required=True)
     parser.add_argument(
         "--mode",
         type=str,
@@ -134,25 +138,25 @@ if __name__ == "__main__":
     parser.add_argument(
         "--speaker_id",
         type=str,
-        default="p001",
+        default="Ses01F",
         help="speaker ID for multi-speaker synthesis, for single-sentence mode only",
     )
     parser.add_argument(
         "--emotion_id",
         type=str,
-        default="happy",
+        default="hap",
         help="emotion ID for multi-emotion synthesis, for single-sentence mode only",
     )
     parser.add_argument(
         "--arousal",
         type=str,
-        default="3",
+        default="3.0000",
         help="arousal value for multi-emotion synthesis, for single-sentence mode only",
     )
     parser.add_argument(
         "--valence",
         type=str,
-        default="3",
+        default="3.0000",
         help="valence value for multi-emotion synthesis, for single-sentence mode only",
     )
     parser.add_argument(
